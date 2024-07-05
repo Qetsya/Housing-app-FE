@@ -1,0 +1,27 @@
+<div *ngIf="houseDetails">
+  <h2>Details</h2>
+  <div>
+    <h3>Type: {{ houseDetails?.type }}</h3>
+  </div>
+  <div>
+    <h3>Address: {{ houseDetails?.address }}</h3>
+  </div>
+  <div>
+    <h3>Square Footage m2: {{ houseDetails?.sqFootage }}</h3>
+  </div>
+  <div>
+    <h3>Rooms: {{ houseDetails?.rooms }}</h3>
+  </div>
+  <div>
+    <h3>Built Year: {{ houseDetails?.builtYear }}</h3>
+  </div>
+  <div>
+    <h3>Rent: {{ houseDetails?.type ? "yes" : "No" }}</h3>
+  </div>
+  <div>
+    <h3>Owner:</h3>
+  </div>
+</div>
+<div style="text-align: center; padding-top: 50px" *ngIf="!houseDetails">
+  <app-loading-spinner></app-loading-spinner>
+</div>

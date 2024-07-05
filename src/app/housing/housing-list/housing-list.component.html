@@ -1,0 +1,14 @@
+<div class="container-padding">
+  <h3>Your houses!</h3>
+
+  <mat-grid-list
+    class="container-padding"
+    cols="2"
+    rowHeight="4:1"
+    *ngFor="let house of houses"
+  >
+    <mat-grid-tile (click)="onHouseSelect(house.id)">
+      {{ house.address }}
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
