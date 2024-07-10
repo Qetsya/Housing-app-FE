@@ -1,12 +1,28 @@
+$primary-color: #1e212d;
+$secondary-color: rgb(194, 24, 91);
+
 html,
 body {
   height: 100%;
+  font-size: 12px;
+  color: white;
+  background-color: rgb(12, 14, 22);
 }
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding: 1rem;
 }
 
-.container-padding {
-  padding: 10px 20px;
+.container {
+  &-padding {
+    padding: 10px 20px;
+  }
+
+  &-shadow {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 30px;
+    background-color: $primary-color;
+  }
 }

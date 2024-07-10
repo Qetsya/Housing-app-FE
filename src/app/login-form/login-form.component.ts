@@ -48,6 +48,7 @@ export class LoginFormComponent implements OnInit {
       ]),
     });
   }
+
   async onSubmit() {
     this.isLoading = true;
     await this.loginService.onLogin(this.loginForm.value);

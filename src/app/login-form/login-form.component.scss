@@ -1,13 +1,68 @@
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
+@import '../../styles.scss';
+
+.login {
+  &-background {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-title {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 
-.example-full-width {
+.app-title {
+  font-size: 3rem;
+  font-weight: 800;
+  align-self: flex-start;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: rgba(216, 215, 215, 0.7);
+}
+
+.form-background {
+  min-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+
+  position: absolute;
+
+  animation-duration: 2s;
+  // animation-name: slideIn;
+  animation-timing-function: ease-in-out;
+}
+
+.login-form {
+  min-width: 150px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.login-full-width {
   width: 100%;
+  
 }
 
 .mat-mdc-button-base {
-  background-color: rgb(248, 128, 148);
+  background-color: $secondary-color;
+  padding: 20px 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-300%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }

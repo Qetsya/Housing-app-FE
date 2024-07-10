@@ -1,0 +1,15 @@
+@import "../../../styles.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-title {
+    margin: 0;
+  }
+}
+
+.mat-mdc-raised-button {
+  background-color: $secondary-color;
+}

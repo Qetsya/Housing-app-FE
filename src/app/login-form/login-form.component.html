@@ -1,37 +1,45 @@
-<div class="container-padding">
-  <h3>Login</h3>
+<div class="login-background">
+  <h2 class="app-title">Housing APP</h2>
+  <div class="container-shadow container-padding form-background">
+    <div>
+      <h2 class="login-title">Sign in with email</h2>
+      <span>Manage your household from anywhere</span>
+    </div>
+    <div *ngIf="isLoading">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit()"
+      class="login-form"
+      *ngIf="!isLoading"
+    >
+      <mat-form-field class="login-full-width">
+        <mat-label>Email</mat-label>
+        <input #email formControlName="email" matInput placeholder="Email" />
+        <mat-error
+          *ngIf="
+            !loginForm.get('email').valid && loginForm.get('email').touched
+          "
+          >Invalid email</mat-error
+        >
+      </mat-form-field>
 
-  <div *ngIf="isLoading">
-    <app-loading-spinner></app-loading-spinner>
+      <mat-form-field class="login-full-width">
+        <mat-label>Password</mat-label>
+        <input formControlName="password" matInput placeholder="Password" />
+        <mat-error
+          *ngIf="
+            !loginForm.get('password').valid &&
+            loginForm.get('password').touched
+          "
+        >
+          Wrong password</mat-error
+        >
+      </mat-form-field>
+      <button mat-stroked-button type="submit" [disabled]="!loginForm.valid">
+        Submit
+      </button>
+    </form>
   </div>
-  <form
-    [formGroup]="loginForm"
-    (ngSubmit)="onSubmit()"
-    class="example-form"
-    *ngIf="!isLoading"
-  >
-    <mat-form-field class="example-full-width">
-      <mat-label>Email</mat-label>
-      <input #email formControlName="email" matInput placeholder="Email" />
-      <mat-error
-        *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched"
-        >Invalid email</mat-error
-      >
-    </mat-form-field>
-
-    <mat-form-field class="example-full-width">
-      <mat-label>Password</mat-label>
-      <input formControlName="password" matInput placeholder="Password" />
-      <mat-error
-        *ngIf="
-          !loginForm.get('password').valid && loginForm.get('password').touched
-        "
-      >
-        Wrong password</mat-error
-      >
-    </mat-form-field>
-    <button mat-stroked-button type="submit" [disabled]="!loginForm.valid">
-      Submit
-    </button>
-  </form>
 </div>
