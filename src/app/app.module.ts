@@ -16,9 +16,11 @@ import { LoadingSpinnerComponent } from './shared/loader/loading-spinner.compone
 import { DataStorageService } from './services/data-storage.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header/header.component';
+import { ProvidersComponent } from './providers/providers.component';
+import { NewHouseComponent } from './housing/house/new-house/new-house.component';
 
 @NgModule({
-  declarations: [AppComponent, HousingComponent, BillsComponent],
+  declarations: [AppComponent, HousingComponent, BillsComponent, ProvidersComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -30,7 +32,8 @@ import { HeaderComponent } from './header/header/header.component';
     HouseDetailsComponent,
     HouseComponent,
     LoadingSpinnerComponent,
-    HeaderComponent
+    HeaderComponent,
+    NewHouseComponent
   ],
   providers: [provideAnimationsAsync(), LoginService, DataStorageService],
   bootstrap: [AppComponent],

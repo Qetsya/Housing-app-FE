@@ -36,7 +36,7 @@
   position: absolute;
 
   animation-duration: 2s;
-  // animation-name: slideIn;
+  animation-name: slideIn;
   animation-timing-function: ease-in-out;
 }
 
@@ -48,7 +48,6 @@
 
 .login-full-width {
   width: 100%;
-  
 }
 
 .mat-mdc-button-base {
@@ -60,9 +59,9 @@
 
 @keyframes slideIn {
   from {
-    transform: translateX(-300%);
+    transform: translateY(300%);
   }
   to {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 }

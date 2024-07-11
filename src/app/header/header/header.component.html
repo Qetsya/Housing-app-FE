@@ -1,10 +1,14 @@
 <div class="container-padding container-shadow header">
-  <h2 class="header-title">Housing APP</h2>
-  <div>
-    <button mat-button > Your Housings </button>
-    <button mat-button > Providers </button>
+  <div class="flex" routerLink="./">
+    <mat-icon>cottage</mat-icon>
+    <h2 class="header-title">Housing APP</h2>
+  </div>
+
+  <div class="header-links">
+    <button mat-button routerLink="./">Your Housings</button>
+    <button mat-button routerLink="./providers">Providers</button>
   </div>
   <div>
-    <button mat-raised-button >Log Out</button>
+    <button mat-raised-button routerLink="../">Log Out</button>
   </div>
 </div>

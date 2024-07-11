@@ -1,0 +1,42 @@
+<div class="modal-background">
+  <div class="modal container-padding container-shadow">
+    <mat-icon>close</mat-icon>
+
+    
+    <div>
+        <h2 class="login-title">Add new address</h2>
+      </div>
+      <!-- <div *ngIf="isLoading">
+        <app-loading-spinner></app-loading-spinner>
+      </div> -->
+      <form
+        [formGroup]="addressForm"
+      >
+        <mat-form-field class="login-full-width">
+          <mat-label>Email</mat-label>
+          <input #email formControlName="email" matInput placeholder="Email" />
+          <mat-error
+    
+            >Invalid email</mat-error
+          >
+        </mat-form-field>
+  
+        <mat-form-field class="login-full-width">
+          <mat-label>Password</mat-label>
+          <input formControlName="password" matInput placeholder="Password" />
+          <mat-error
+    
+          >
+            Wrong password</mat-error
+          >
+        </mat-form-field>
+        <button mat-stroked-button type="submit" [disabled]="!addressForm.valid">
+          Submit
+        </button>
+      </form>
+
+
+
+
+  </div>
+</div>

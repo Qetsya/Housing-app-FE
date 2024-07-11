@@ -1,15 +1,28 @@
 @import "../../../styles.scss";
 
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2rem;
 
   &-title {
     margin: 0;
   }
+
+  &-links {
+    display: flex;
+    gap: 2rem;
+  }
 }
 
-.mat-mdc-raised-button {
+.mat-mdc-raised-button:not(:disabled) {
   background-color: $secondary-color;
 }
