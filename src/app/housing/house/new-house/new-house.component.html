@@ -1,42 +1,42 @@
 <div class="modal-background">
-  <div class="modal container-padding container-shadow">
-    <mat-icon>close</mat-icon>
+  <div class="modal container-padding container-shadow address-form">
+    <mat-icon class="button-close" (click)="closeModal()">close</mat-icon>
 
-    
     <div>
-        <h2 class="login-title">Add new address</h2>
-      </div>
-      <!-- <div *ngIf="isLoading">
+      <h2>Add new address</h2>
+    </div>
+    <!-- <div *ngIf="isLoading">
         <app-loading-spinner></app-loading-spinner>
       </div> -->
-      <form
-        [formGroup]="addressForm"
-      >
-        <mat-form-field class="login-full-width">
-          <mat-label>Email</mat-label>
-          <input #email formControlName="email" matInput placeholder="Email" />
-          <mat-error
-    
-            >Invalid email</mat-error
-          >
-        </mat-form-field>
-  
-        <mat-form-field class="login-full-width">
-          <mat-label>Password</mat-label>
-          <input formControlName="password" matInput placeholder="Password" />
-          <mat-error
-    
-          >
-            Wrong password</mat-error
-          >
-        </mat-form-field>
-        <button mat-stroked-button type="submit" [disabled]="!addressForm.valid">
-          Submit
-        </button>
-      </form>
+    <form #addressForm="ngForm" (ngSubmit)="onSubmit()">
 
 
+      <mat-form-field class="login-full-width">
+        <mat-label>Street</mat-label>
+        <input name="street" matInput placeholder="Street" required />
+        <mat-error
+          *ngIf="
+            !addressForm.get('street').valid &&
+            addressForm.get('street').touched
+          "
+          >You must enter a value</mat-error
+        >
+      </mat-form-field>
 
+      <mat-form-field class="login-full-width">
+        <mat-label>City</mat-label>
+        <input name="city"  matInput placeholder="City" required />
+        <mat-error
+          *ngIf="
+            !addressForm.get('city').valid && addressForm.get('city').touched
+          "
+          >You must enter a value</mat-error
+        >
+      </mat-form-field>
 
+      <button mat-stroked-button type="submit" [disabled]="!addressForm.valid">
+        Save
+      </button>
+    </form>
   </div>
 </div>

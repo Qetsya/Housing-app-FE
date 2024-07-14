@@ -21,10 +21,10 @@ import { LoadingSpinnerComponent } from '../shared/loader/loading-spinner.compon
   templateUrl: './login-form.component.html',
   styleUrl: './login-form.component.scss',
   imports: [
+    CommonModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule,
-    CommonModule,
     MatButtonModule,
     LoadingSpinnerComponent,
   ],

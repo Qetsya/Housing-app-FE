@@ -1,4 +1,4 @@
-@import "../../../styles.scss";
+@import "../../styles.scss";
 
 .flex {
   display: flex;
@@ -9,9 +9,11 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   margin-bottom: 2rem;
+
+  border-radius: 5px;
 
   &-title {
     margin: 0;
@@ -20,9 +22,23 @@
   &-links {
     display: flex;
     gap: 2rem;
+    padding: 1rem 0;
   }
+}
+
+.mat-mdc-button {
+  flex: 1;
+  min-width: 130px;
 }
 
 .mat-mdc-raised-button:not(:disabled) {
   background-color: $secondary-color;
+  font-size: 1rem;
+}
+
+@media (min-width: $layout-breakpoint-medium) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

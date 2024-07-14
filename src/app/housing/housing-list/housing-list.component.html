@@ -1,4 +1,4 @@
-<div class="button-container">
+<div flex class="button-container">
   <button mat-button class="button-add-address" (click)="openModal()">
     <mat-icon>add_circle</mat-icon>
     <span>New Address</span>
@@ -30,5 +30,5 @@
   </div>
 </div>
 <div>
-  <app-new-house *ngIf="isModalOpen"/>
+  <app-new-house *ngIf="isModalOpen" (onClose)="isModalOpen = false"/>
 </div>

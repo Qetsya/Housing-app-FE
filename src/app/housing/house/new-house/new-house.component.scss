@@ -16,3 +16,27 @@
     min-height: 400px;
     min-width: 400px;
 }
+
+.button {
+    &-close {
+        float: right;
+        cursor: pointer;
+    }
+}
+
+.address-form {
+    min-width: 150px;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .login-full-width {
+    width: 100%;
+  }
+  
+  .mat-mdc-button-base {
+    // background-color: $secondary-color;
+    padding: 20px 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }

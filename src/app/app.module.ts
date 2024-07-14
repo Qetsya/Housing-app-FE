@@ -15,7 +15,7 @@ import { BillsComponent } from './housing/house/bills/bills.component';
 import { LoadingSpinnerComponent } from './shared/loader/loading-spinner.component';
 import { DataStorageService } from './services/data-storage.service';
 import { HttpClientModule } from '@angular/common/http';
-import { HeaderComponent } from './header/header/header.component';
+import { HeaderComponent } from "./header/header.component";
 import { ProvidersComponent } from './providers/providers.component';
 import { NewHouseComponent } from './housing/house/new-house/new-house.component';
 
@@ -33,7 +33,7 @@ import { NewHouseComponent } from './housing/house/new-house/new-house.component
     HouseComponent,
     LoadingSpinnerComponent,
     HeaderComponent,
-    NewHouseComponent
+    NewHouseComponent,
   ],
   providers: [provideAnimationsAsync(), LoginService, DataStorageService],
   bootstrap: [AppComponent],
